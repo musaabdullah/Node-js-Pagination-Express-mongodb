@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan('combined'));
 
-mongoose.connect("mongodb://localhost:27017/schools", {
+mongoose.connect("mongodb://localhost:27017/hell", {
     useCreateIndex: true,
     useNewUrlParser: true,
     useUnifiedTopology: true,
