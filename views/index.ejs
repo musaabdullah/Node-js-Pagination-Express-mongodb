@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yantramanav&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="/public/style.css">
+    <title>Node js Pagination</title>
+</head>
+<body>
+   <div class="container">
+       <div class="posts">
+           <div class="post-items">
+               <table>
+                   <tr>
+                       <td>id</td>
+                       <td>title</td>
+                       <td>body</td>
+                   </tr>
+                   <% posts.forEach((post) => {%>
+                   <tr>
+                        <td><%= post._id %></td>
+                        <td><%= post.title %></td>
+                        <td><%= post.body %></td>
+                   </tr>
+                   <% }) %>           
+               </table>
+          </div>
+           <div class="post-pagination">
+               <% for(var i = 0; i <= totalPages.length; i++) {%>
+                  <button class="white">Page :<%= i %></button>
+                <% } %>
+           </div>
+       </div>
+   </div>
+</body>
+</html>
